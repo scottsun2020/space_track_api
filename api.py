@@ -26,7 +26,7 @@ with requests.Session() as session:
         print(resp)
 
 #print(resp.text)
-with open("space_track.txt", "w") as f:
+with open("space_track.orb", "w") as f:
     f.write(resp.text)
 
 
