@@ -1,8 +1,7 @@
-# space_track_api
-## using a API script in Python to read the satalite data through space-track.org
-## using Docker to create a container environment for API script
+## How to Run space_track_api Script 
+An API script in Python is created to read the satalite data through space-track.org and we also use Docker to create a container environment for API script to make sure it runs in different environment.
 
-## Docker Commands:
+### Docker Commands:
 ```
 docker build -t python-api.
 docker run -it python-api
