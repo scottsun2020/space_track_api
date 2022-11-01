@@ -11,7 +11,7 @@ requestLogin = "/ajaxauth/login"
 query  = "/basicspacedata/query/class/gp/EPOCH/>now-30/MEAN_MOTION/0.99--1.01/ECCENTRICITY/<0.01/format/tle"
 siteCred = {'identity': username, 'password': password}
 
-#
+
 # use requests package to drive the RESTful session with space-track.org
 with requests.Session() as session:
     # need to log in first. note that we get a 200 to say the web site got the data, not that we are logged in
@@ -20,14 +20,14 @@ with requests.Session() as session:
         print('not working')
 
 
-    # this query picks up all all NAVSTAR greater than 40,000 we can use 10,000 to find more navstar sats.
+    # this query based on uriBase and custom query
     resp = session.get(uriBase + query)
     if resp.status_code != 200:
         print(resp)
 
-#print(resp.text)
+#save read files into space_track.orb
 with open("space_track.orb", "w") as f:
     f.write(resp.text)
 
-
+#print statement to show the code works
 print("It works!")
