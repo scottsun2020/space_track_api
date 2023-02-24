@@ -7,8 +7,8 @@ password = "your_space_track_password"
 #URI snippets
 uriBase = "https://www.space-track.org"
 requestLogin = "/ajaxauth/login"
-#sample query; user input custom query will be updated soon
-query  = "/basicspacedata/query/class/gp/EPOCH/>now-30/MEAN_MOTION/0.99--1.01/ECCENTRICITY/<0.01/format/tle"
+#this query will retrieve the 32 usa navstar operational satellites and also the 6 inoperational satellites, so total 38
+query  = "/basicspacedata/query/class/gp/NORAD_CAT_ID/%3E24500/OBJECT_NAME/NAVSTAR~~/orderby/NORAD_CAT_ID/format/tle"
 siteCred = {'identity': username, 'password': password}
 
 
